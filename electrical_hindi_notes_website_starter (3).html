@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electrical Engineering Notes (Hindi)</title>
+  <meta name="description" content="Electrical Engineering Syllabus-wise Notes, Interview Q&A और Short Notes – हिंदी में" />
+  <style>
+    :root{--bg:#0f172a;--card:#0b1224;--pri:#22c55e;--txt:#e5e7eb;--mut:#9ca3af}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto; background:linear-gradient(180deg,#020617,#020617 40%,#020617); color:var(--txt)}
+    header{padding:28px 16px;border-bottom:1px solid #0b1224; position:sticky; top:0; backdrop-filter: blur(6px); background:rgba(2,6,23,.7)}
+    .wrap{max-width:1100px;margin:auto}
+    h1{margin:0;font-size:28px} .tag{color:var(--mut)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:24px 16px}
+    .card{background:linear-gradient(180deg,#020617,#020617), radial-gradient(1200px 400px at -10% -10%,rgba(34,197,94,.12),transparent 40%); border:1px solid #0b1224; border-radius:16px; padding:16px}
+    .card h3{margin:4px 0 8px} .card p{color:var(--mut);font-size:14px}
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:rgba(34,197,94,.15);color:#86efac;border:1px solid rgba(34,197,94,.35);text-decoration:none}
+    footer{padding:24px 16px;border-top:1px solid #0b1224;color:var(--mut)}
+    nav a{margin-right:12px;color:#86efac;text-decoration:none}
+    section{padding:0 16px 24px}
+    .topic{border:1px dashed #0b1224;border-radius:12px;padding:12px;margin:10px 0}
+    code{background:#020617;border:1px solid #0b1224;border-radius:8px;padding:2px 6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Electrical Engineering – Hindi Notes</h1>
+      <p class="tag">Syllabus-wise Notes • Interview Q&A • Short Notes (SSC JE / Diploma / BE)</p>
+      <nav>
+        <a href="#basic">Basic Electrical</a>
+        <a href="#machines">Electrical Machines</a>
+        <a href="#power">Power System</a>
+        <a href="#pe">Power Electronics</a>
+        <a href="#util">Utilization / Drives</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <div class="card"><h3>Basic Electrical</h3><p>Ohm’s Law, KCL/KVL, AC Fundamentals, RLC, Measurements</p><a class="btn" href="#basic">Open</a></div>
+      <div class="card"><h3>Electrical Machines</h3><p>Transformer, DC Machine, Induction & Synchronous Motors</p><a class="btn" href="#machines">Open</a></div>
+      <div class="card"><h3>Power System</h3><p>Generation, Transmission, Distribution, Switchgear</p><a class="btn" href="#power">Open</a></div>
+      <div class="card"><h3>Power Electronics</h3><p>Diode, SCR, Rectifier, Inverter, Chopper, SMPS</p><a class="btn" href="#pe">Open</a></div>
+      <div class="card"><h3>Utilization / Drives</h3><p>Heating, Welding, Illumination, Electric Drives & Traction</p><a class="btn" href="#util">Open</a></div>
+    </section>
+
+    <section id="basic">
+      <h2>Basic Electrical (Hindi Notes + Examples + Interview Q&A)</h2>
+      <p>नीचे Basic Electrical के टॉपिक्स को detail + example के साथ पढ़ने का टेम्पलेट दिया है। आप हर टॉपिक को अलग-अलग पेज (जैसे: <code>ohms-law.html</code>) में भी रख सकते हैं।</p>
+
+      <div class="topic">
+        <h3>1) ओम का नियम (Ohm’s Law)</h3>
+        <p><b>परिभाषा:</b> किसी चालक में बहने वाली धारा (I), लगाए गए वोल्टेज (V) के समानुपाती होती है, यदि तापमान स्थिर रहे।</p>
+        <p><b>सूत्र:</b> <b>V = I × R</b></p>
+        <p><b>Step-by-step समझ:</b> वोल्टेज बढ़ाओ → करंट बढ़ेगा; रेजिस्टेंस बढ़ाओ → करंट घटेगा।</p>
+        <p><b>Numerical Example:</b> यदि V = 10V और R = 5Ω, तो I = 10/5 = <b>2A</b>।</p>
+        <p><b>Real-life:</b> पतला/लंबा तार → ज्यादा रेजिस्टेंस → चार्जिंग स्लो।</p>
+        <p><b>Interview Q&A:</b> ओम का नियम सेमीकंडक्टर में सीधे लागू क्यों नहीं होता? <i>क्योंकि उनका V–I संबंध रैखिक नहीं होता।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>2) KCL & KVL</h3>
+        <p><b>KCL:</b> जंक्शन पर आने वाली कुल धारा = जाने वाली कुल धारा।</p>
+        <p><b>KVL:</b> किसी बंद लूप में सभी वोल्टेज का बीजगणितीय योग शून्य।</p>
+        <p><b>Example:</b> एक लूप में 12V स्रोत और 4Ω, 2Ω रेजिस्टेंस हों तो ड्रॉप का योग 12V होगा।</p>
+      </div>
+
+      <div class="topic">
+        <h3>3) AC vs DC, RMS Value</h3>
+        <p><b>AC:</b> दिशा बदलती है; <b>DC:</b> एक दिशा।</p>
+        <p><b>RMS:</b> AC का प्रभावी मान जो DC जितनी ऊष्मा दे।</p>
+        <p><b>Tip:</b> घरेलू सप्लाई 230V RMS, 50Hz।</p>
+      </div>
+
+      <div class="topic">
+        <h3>4) R, L, C और रेज़ोनेंस</h3>
+        <p><b>R:</b> धारा का विरोध; <b>L:</b> धारा परिवर्तन का विरोध; <b>C:</b> चार्ज संग्रह।</p>
+        <p><b>Resonance:</b> XL = XC → इम्पीडेंस न्यूनतम (सीरीज़ RLC)।</p>
+      </div>
+
+      <div class="topic">
+        <h3>5) Measurements (Ammeter, Voltmeter, Wattmeter, Megger)</h3>
+        <p><b>Ammeter:</b> सीरीज़ में; <b>Voltmeter:</b> पैरेलल में।</p>
+        <p><b>Wattmeter:</b> शक्ति मापन; <b>Megger:</b> इंसुलेशन रेजिस्टेंस।</p>
+      </div>
+
+      <div class="topic">
+        <h3>Basic Electrical – आगे के टॉपिक्स (Outline)</h3>
+        <ul>
+          <li>Series/Parallel Circuits + Examples</li>
+          <li>Power, Energy, Power Factor + Improvement</li>
+          <li>Single-phase AC Circuits</li>
+          <li>Network Theorems (Thevenin, Norton – Basics)</li>
+          <li>Earthing, Safety, MCB/Fuse</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="machines">
+      <h2>Electrical Machines (Hindi Notes + Examples + Interview Q&A)</h2>
+      <p>यहाँ Electrical Machines के मुख्य टॉपिक्स को आसान भाषा, step-by-step working और examples के साथ समझाया गया है।</p>
+
+      <div class="topic">
+        <h3>1) ट्रांसफॉर्मर (Transformer)</h3>
+        <p><b>परिभाषा:</b> ट्रांसफॉर्मर एक स्थिर विद्युत यंत्र है जो AC वोल्टेज को बढ़ाता या घटाता है।</p>
+        <p><b>सिद्धांत:</b> Electromagnetic Induction</p>
+        <p><b>Working (Steps):</b> प्राइमरी में AC → कोर में फ्लक्स → सेकेंडरी में EMF प्रेरित।</p>
+        <p><b>Turns Ratio:</b> Vs/Vp = Ns/Np</p>
+        <p><b>Numerical Example:</b> Ns=200, Np=100 ⇒ Vs/Vp=2 (वोल्टेज दोगुना)।</p>
+        <p><b>Interview Q:</b> ट्रांसफॉर्मर DC पर क्यों काम नहीं करता? <i>क्योंकि DC से बदलता फ्लक्स नहीं बनता।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>2) DC मशीन (DC Motor/Generator)</h3>
+        <p><b>परिभाषा:</b> DC सप्लाई पर कार्य करने वाली मशीन।</p>
+        <p><b>Motor Principle:</b> Fleming का Left Hand Rule</p>
+        <p><b>Generator Principle:</b> Faraday का प्रेरण नियम</p>
+        <p><b>Back EMF:</b> मोटर में उत्पन्न विरोधी EMF जो करंट को नियंत्रित करता है।</p>
+        <p><b>Use:</b> क्रेन्स, रोलिंग मिल, ट्रेन ट्रैक्शन (पुराने सिस्टम)।</p>
+      </div>
+
+      <div class="topic">
+        <h3>3) इंडक्शन मोटर (Induction Motor)</h3>
+        <p><b>परिभाषा:</b> AC मोटर जिसमें रोटर करंट प्रेरण से उत्पन्न होता है।</p>
+        <p><b>Working:</b> स्टेटर RMF → रोटर में EMF → करंट → टॉर्क।</p>
+        <p><b>Slip:</b> s = (Ns − Nr)/Ns</p>
+        <p><b>Advantages:</b> सरल, मजबूत, कम मेंटेनेंस।</p>
+        <p><b>Interview Q:</b> इंडक्शन मोटर को Induction क्यों कहते हैं? <i>क्योंकि रोटर करंट प्रेरण से बनता है।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>4) सिंक्रोनस मशीन (Synchronous Motor/Alternator)</h3>
+        <p><b>परिभाषा:</b> रोटर स्पीड, सिंक्रोनस स्पीड के बराबर रहती है।</p>
+        <p><b>Why not self-starting?</b> प्रारंभ में औसत टॉर्क शून्य।</p>
+        <p><b>Use:</b> पावर फैक्टर सुधार, जनरेशन (Alternator)।</p>
+        <p><b>Interview Q:</b> सिंक्रोनस मोटर का PF कंट्रोल कैसे? <i>Excitation बदलकर।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>5) Losses & Efficiency (सभी मशीनों के लिए)</h3>
+        <p><b>Losses:</b> Copper (I²R), Core (Hysteresis + Eddy), Mechanical</p>
+        <p><b>Efficiency:</b> η = Output/Input</p>
+        <p><b>Tip:</b> अच्छी कूलिंग और सही लोडिंग से दक्षता बढ़ती है।</p>
+      </div>
+
+      <div class="topic">
+        <h3>Electrical Machines – आगे के टॉपिक्स (Outline)</h3>
+        <ul>
+          <li>Transformer Tests (OC/SC) + Regulation</li>
+          <li>DC Motor Speed Control Methods</li>
+          <li>Induction Motor Starting (DOL, Star-Delta)</li>
+          <li>Torque–Slip Characteristics</li>
+          <li>Single-phase Motors (Split-phase, Capacitor)</li>
+          <li>Special Motors (Stepper, Servo – Basics)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="power">
+      <h2>Power System (Hindi Notes + Examples + Interview Q&A)</h2>
+      <p>इस सेक्शन में Power Generation से लेकर Transmission, Distribution और Protection तक पूरे पावर सिस्टम को आसान भाषा में समझाया गया है।</p>
+
+      <div class="topic">
+        <h3>1) Power Generation (विद्युत उत्पादन)</h3>
+        <p><b>परिभाषा:</b> विभिन्न स्रोतों से विद्युत ऊर्जा का उत्पादन।</p>
+        <p><b>प्रकार:</b> Thermal, Hydro, Nuclear, Solar, Wind</p>
+        <p><b>Step-by-step:</b> ऊर्जा स्रोत → टरबाइन → अल्टरनेटर → ट्रांसफॉर्मर → ग्रिड</p>
+        <p><b>Real-life:</b> NTPC (Thermal), Tehri (Hydro), Solar Park</p>
+        <p><b>Interview Q:</b> Thermal plant में बॉयलर का काम? <i>भाप बनाकर टरबाइन घुमाना।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>2) Transmission System (प्रेषण प्रणाली)</h3>
+        <p><b>परिभाषा:</b> उत्पादन केंद्र से दूर स्थित लोड तक उच्च वोल्टेज पर बिजली पहुँचाना।</p>
+        <p><b>क्यों High Voltage?</b> I²R लॉस कम करने के लिए।</p>
+        <p><b>AC vs HVDC:</b> लंबी दूरी/समुद्री केबल में HVDC लाभदायक।</p>
+        <p><b>Corona Loss:</b> उच्च वोल्टेज पर आयनीकरण से होने वाली हानि।</p>
+        <p><b>Interview Q:</b> ट्रांसमिशन में वोल्टेज क्यों बढ़ाया जाता है? <i>लाइन लॉस कम करने हेतु।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>3) Substation (उपकेंद्र)</h3>
+        <p><b>कार्य:</b> वोल्टेज को बढ़ाना/घटाना, स्विचिंग और सुरक्षा।</p>
+        <p><b>मुख्य उपकरण:</b> ट्रांसफॉर्मर, सर्किट ब्रेकर, आइसोलेटर, CT/PT, बसबार</p>
+        <p><b>Types:</b> Step-up, Step-down, Grid Substation</p>
+        <p><b>Interview Q:</b> आइसोलेटर और ब्रेकर में अंतर? <i>आइसोलेटर नो-लोड पर, ब्रेकर लोड/फॉल्ट पर।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>4) Distribution System (वितरण प्रणाली)</h3>
+        <p><b>परिभाषा:</b> सबस्टेशन से उपभोक्ता तक बिजली पहुँचाना।</p>
+        <p><b>Voltage Levels:</b> 11kV/33kV (Primary), 415V/230V (Secondary)</p>
+        <p><b>System:</b> Radial, Ring Main, Interconnected</p>
+        <p><b>Real-life:</b> घरों तक 230V सप्लाई।</p>
+      </div>
+
+      <div class="topic">
+        <h3>5) Line Losses & Voltage Drop</h3>
+        <p><b>Loss:</b> I²R</p>
+        <p><b>Voltage Drop:</b> लंबी लाइन/ज्यादा करंट से ड्रॉप बढ़ता है।</p>
+        <p><b>Tip:</b> हाई वोल्टेज ट्रांसमिशन, उचित कंडक्टर साइज से हानि कम।</p>
+      </div>
+
+      <div class="topic">
+        <h3>6) Switchgear & Protection (स्विचगियर और संरक्षण)</h3>
+        <p><b>उपकरण:</b> Circuit Breaker, Relay, Fuse, MCB</p>
+        <p><b>कार्य:</b> फॉल्ट होने पर सर्किट को सुरक्षित रूप से डिस्कनेक्ट करना।</p>
+        <p><b>Interview Q:</b> रिले का काम? <i>फॉल्ट पहचानकर ब्रेकर को ट्रिप कराना।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>7) Earthing & Safety (अर्थिंग और सुरक्षा)</h3>
+        <p><b>उद्देश्य:</b> मानव सुरक्षा और लीकेज करंट को जमीन में प्रवाहित करना।</p>
+        <p><b>Types:</b> Plate, Pipe, Strip Earthing</p>
+        <p><b>Interview Q:</b> अर्थिंग क्यों जरूरी है? <i>शॉक और उपकरण क्षति से बचाव।</i></p>
+      </div>
+
+      <div class="topic">
+        <h3>Power System – आगे के टॉपिक्स (Outline)</h3>
+        <ul>
+          <li>Load Curve & Load Factor</li>
+          <li>Power Factor Improvement Methods</li>
+          <li>Short Circuit Analysis (Basics)</li>
+          <li>Protection Schemes (Overcurrent, Differential – Basics)</li>
+          <li>Grid Stability & Blackout (Intro)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pe">
+      <h2>Power Electronics</h2>
+      <div class="topic"><h4>Rectifier</h4><p>AC → DC</p></div>
+      <div class="topic"><h4>Inverter</h4><p>DC → AC</p></div>
+    </section>
+
+    <section id="util">
+      <h2>Utilization / Drives</h2>
+      <div class="topic"><h4>Electric Heating</h4><p>स्वच्छ, कुशल और नियंत्रित ऊष्मा।</p></div>
+      <div class="topic"><h4>Electric Drives</h4><p>Motor + Control = Drive</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Electrical Hindi Notes • Contact: yourname@email.com</div>
+  </footer>
+</body>
+</html>
